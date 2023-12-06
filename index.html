@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Hello</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+
+    <!-- VUEJS -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <h1>
+            {{pageTitle}}
+        </h1>
+        <div class="label">
+            <label for="title-input">Type the title of the page</label>
+            <input type="text" v-model = "pageTitle" name="title-input" id="title-input" >
+        </div>
+        <div class="label">
+            <label for="image-input">Type your image URL</label>
+            <input type="text" v-model = "userImage" name="image-input" id="image-input" >
+        </div>
+        <div>
+            <img :src="userImage" alt="User image">
+        </div>
+    </div>
+    <!-- SCRIPT JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
